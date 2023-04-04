@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<html><head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Test Page</title>
+
+
+	<style>
+		body{ font-size:16px; padding-left:25px;padding-top:25px;}
+		textarea,textarea:focus{font-size:16px; width:300px;height:150px; }
+		input[type=file]{ font-size:16px; }
+		input[type=button]{ font-size:16px; }
+	</style>
+
+</head>
+
+
+
+<body class="en">
+
+
+<label for="avatar">Choose a profile picture:</label>
+<div> iOS photo upload test </div>
+<input type="file"
+       id="avatar" name="avatar"
+       accept="image/png, image/jpeg">
+
+<input type="button" value=" save " id="avatarSave" name="avatarSave">
+
+
+<br><br><br><br>
+<div> iOS keyboard test </div>
+<textarea cols="40" rows="10"></textarea>
+
+<script>
+
+
+function save(){
+	var formData=new FormData();
+	var hasFile = false;
+	var fileInput = document.getElementById('avatar');
+	if (fileInput.files && fileInput.files[0]) {
+		var file = fileInput.files[0];
+		formData.append('messageImage', file);
+		hasFile = true;
+	}
+
+	if(hasFile){
+		var xmlhttp = new XMLHttpRequest();
+		xmlhttp.onreadystatechange = function() {
+			if (xmlhttp.readyState == XMLHttpRequest.DONE) {
+			   if (xmlhttp.status == 200) {
+
+			   }
+			}
+		};
+
+		xmlhttp.open("GET", "/testphoto.php?save", true);
+		xmlhttp.send();
+	}
+
+}
+
+
+document.getElementById("avatarSave").addEventListener("click", save);
+
+
+</script>
+
+</body>
+</html>
