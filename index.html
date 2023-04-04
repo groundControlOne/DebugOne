@@ -26,7 +26,7 @@
 <input type="file"
        id="avatar" name="avatar"
        accept="image/png, image/jpeg">
-
+<br>
 <input type="button" value=" save " id="avatarSave" name="avatarSave">
 
 
@@ -38,7 +38,7 @@
 
 
 function save(){
-console.log("save")
+alert("save")
 	var formData=new FormData();
 	var hasFile = false;
 	var fileInput = document.getElementById('avatar');
@@ -47,7 +47,7 @@ console.log("save")
 		formData.append('messageImage', file);
 		hasFile = true;
 	}
-console.log(hasFile)
+alert(hasFile)
 	if(hasFile){
 		var xmlhttp = new XMLHttpRequest();
 		
