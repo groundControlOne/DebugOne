@@ -38,7 +38,7 @@
 
 
 function save(){
-alert("save")
+
 	var formData=new FormData();
 	var hasFile = false;
 	var fileInput = document.getElementById('avatar');
@@ -47,7 +47,7 @@ alert("save")
 		formData.append('messageImage', file);
 		hasFile = true;
 	}
-alert(hasFile)
+
 	if(hasFile){
 		var xmlhttp = new XMLHttpRequest();
 		
