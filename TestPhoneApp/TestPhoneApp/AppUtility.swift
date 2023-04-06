@@ -8,7 +8,11 @@ func print(_ item: @autoclosure () -> Any, separator: String = " ", terminator: 
     Swift.print(item(), separator:separator, terminator: terminator)
 }
 
-
+extension NSObject {
+    var myClassName: String {
+        return NSStringFromClass(type(of: self))
+    }
+}
 
 extension UIApplication {
     class func topViewController(controller: UIViewController? = UIApplication
