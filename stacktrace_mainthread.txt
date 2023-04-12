@@ -1,0 +1,25 @@
+
+https://forums.swift.org/t/putting-a-break-on-console-warning/64092/2
+
+
+Thread 1
+#0	0x0000000000000000 in SecTrustEvaluateIfNecessary ()
+#1	0x0000000000000000 in SecTrustGetCertificateCount ()
+#2	0x0000000000000000 in WebCore::CertificateInfo::containsNonRootSHA1SignedCertificate() const ()
+#3	0x0000000000000000 in WebKit::WebPageProxy::didCommitLoadForFrame(WTF::ObjectIdentifier<WebCore::FrameIdentifierType>, WebKit::FrameInfoData&&, WebCore::ResourceRequest&&, unsigned long long, WTF::String const&, bool, WebCore::FrameLoadType, WebCore::CertificateInfo const&, bool, bool, bool, std::__1::optional<WebCore::HasInsecureContent>, WebCore::MouseEventPolicy, WebKit::UserData const&) ()
+#4	0x0000000000000000 in WebKit::WebPageProxy::didReceiveMessage(IPC::Connection&, IPC::Decoder&) ()
+#5	0x0000000000000000 in IPC::MessageReceiverMap::dispatchMessage(IPC::Connection&, IPC::Decoder&) ()
+#6	0x0000000000000000 in WebKit::WebProcessProxy::didReceiveMessage(IPC::Connection&, IPC::Decoder&) ()
+#7	0x0000000000000000 in IPC::Connection::dispatchMessage(std::__1::unique_ptr<IPC::Decoder, std::__1::default_delete<IPC::Decoder> >) ()
+#8	0x0000000000000000 in IPC::Connection::dispatchIncomingMessages() ()
+#9	0x0000000000000000 in WTF::RunLoop::performWork() ()
+#10	0x0000000000000000 in WTF::RunLoop::performWork(void*) ()
+#11	0x0000000000000000 in __CFRUNLOOP_IS_CALLING_OUT_TO_A_SOURCE0_PERFORM_FUNCTION__ ()
+#12	0x0000000000000000 in __CFRunLoopDoSource0 ()
+#13	0x0000000000000000 in __CFRunLoopDoSources0 ()
+#14	0x0000000000000000 in __CFRunLoopRun ()
+#15	0x0000000000000000 in CFRunLoopRunSpecific ()
+#16	0x0000000000000000 in GSEventRunModal ()
+#17	0x0000000000000000 in -[UIApplication _run] ()
+#18	0x0000000000000000 in UIApplicationMain ()
+#19	0x0000000000000000 in main at /Users/coder/Desktop/swiftapps/apps/Testapp/Testapp/AppDelegate.swift:23
